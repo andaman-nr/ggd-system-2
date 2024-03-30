@@ -1,0 +1,9 @@
+{
+  "name": "ggd-web-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/ggd-web-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["ggd-web"],
+  "// targets": "to see all targets run: nx show project ggd-web-e2e --web",
+  "targets": {}
+}
