@@ -2,12 +2,19 @@
   "name": "@ggd-system/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "commit": "git-cz"
+  },
   "private": true,
-  "dependencies": {},
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
   "devDependencies": {
     "@nx/js": "18.2.1",
     "@nx/workspace": "18.2.1",
+    "git-cz": "^4.9.0",
     "nx": "18.2.1"
   }
 }
