@@ -1,0 +1,25 @@
+name: Sync to Azure DevOps
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    environment: ci
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Git
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'github.actions@gmail.com'
+
+      - name: Push to Azure DevOps
+        run: |
+          git remote add azure https://andaman.nr:${{ secrets.PASSWORD }}@dev.azure.com/gogooddev/ggd-system/_git/ggd-system-2
+          git push azure --mirror
